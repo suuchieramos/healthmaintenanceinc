@@ -1,0 +1,211 @@
+#medicalprovidermainpage
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPgMediProv.aspx.cs" Inherits="WebApplication2.MainPg___Medical_Prov" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        /*.auto-style1 {
+            text-align: center;
+        }
+        .auto-style2 {
+            font-family: tahoma;
+        }
+        .auto-style3 {
+            text-align: center;
+            font-family: tahoma;
+        }
+        .auto-style4 {
+            font-family: tahoma;
+            text-align: left;
+        }*/
+
+        p {
+            color: red;
+            text-align: center;
+            font-size: large;
+        }
+
+        body {
+            background-image: url('../../Content/web-site-background-designs.jpeg');
+            margin: 2.5%;
+        }
+
+        /*transbox*/
+        div.transbox {
+            margin: 15px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.6;
+            filter: alpha(opacity=60); /* For IE8 and earlier */
+        }
+
+            div.transbox p {
+                margin: 5%;
+                font-weight: bold;
+                color: #000000;
+            }
+
+        p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: xx-large;
+            color: antiquewhite;
+        }
+        /*navigation bar*/
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 5px;
+            overflow: hidden;
+            background-color: #333;
+            margin: 0%;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 25px;
+                text-decoration: none;
+                font-size: large;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #111;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        /*end of main page*/
+        type="text/css" > body {
+            border: 4px double black;
+        }
+
+        .auto-style1 {
+            text-align: center;
+        }
+
+        .MP {
+            font-family: tahoma;
+            font-size: xx-large;
+            color: gray;
+        }
+
+        .auto-style3 {
+            text-align: center;
+            font-family: tahoma;
+        }
+
+        .Moveto {
+            font-family: tahoma;
+            text-align: left;
+            text-decoration: double;
+            color: gray;
+            font-size: x-large;
+        }
+
+        /*buttons*/
+        .button {
+            background-color: gray; /* Green */
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 2px 1px;
+            cursor: pointer;
+        }
+
+        .button {
+            border-radius: 60%;
+        }
+
+        p.SearchTo {
+            text-align: center;
+            font-size: x-large;
+            color: gray;
+        }
+
+        p.ViewOther {
+            text-align: center;
+            font-size: x-large;
+            color: gray;
+        }
+
+        div.borderrr {
+            border: 5px double black;
+            width: 700px;
+            height: 450px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <%-- main page designnnn --%>
+    <%--@*Transbox*@--%>
+    <div class="background">
+        <div class="transbox">
+            <p class="wuy">Health Maintenance, Inc.</p>
+        </div>
+    </div>
+        <ul>
+            <%--@*-navigation bar*@--%>
+            <li><a href="MainPage - Home.aspx">Home</a></li>
+            <li><a href="nolink">About Us</a></li>
+            <li><a button title="Placeholder" href="MainPgMediProv.aspx">Affliated Medical Providers</a></li>
+            <li><a button title="Placeholder" href="AvailProc.aspx">Availment Procedure</a></li>
+            <li><a button title="Placeholder" href="FAQ.aspx">FAQ</a></li>
+            <li><a button title="Placeholder" href="nolink">Application for Membership</a></li>
+            <li><a href="nolink">User Log In</a></li>
+
+        </ul>
+
+    <form id="form1" runat="server">
+        <div class="borderrr">
+            <div class="auto-style1">
+                <%-- TITLE PAGE --%>
+                <h1 class="MP">Medical Providers</h1>
+                <p class="Moveto">
+                    Move to:&nbsp;&nbsp;
+            <asp:Button ID="Button5" CssClass="button MI" runat="server" OnClick="Button5_Click" Text="Membership Inquiry" />
+                </p>
+
+            </div>
+            <p class="SearchTo">
+                Search from:
+            </p>
+
+            <p class="button5">
+                <asp:Button ID="Button1" runat="server" CssClass="button button5" OnClick="Button1_Click" Text="Hospitals" />
+                <asp:Button ID="Button8" runat="server" CssClass="button button5" OnClick="Button2_Click" Text="Clinics" />
+                <asp:Button ID="Button3" runat="server" CssClass="button button5" OnClick="Button3_Click" Text="Doctors" />
+                <asp:Button ID="Button4" runat="server" CssClass="button button5" OnClick="Button4_Click" Text="Dentists" />
+
+            </p>
+
+            <p class="ViewOther">
+                View Other:
+            </p>
+            
+            <p class="buttonS">
+                <asp:Button ID="Button6" runat="server" CssClass="button buttonS" OnClick="Button6_Click" Text="Specialization" />
+                <asp:Button ID="Button7" runat="server" CssClass="button buttonC" OnClick="Button7_Click" Text="Cities" />
+            </p>
+        </div>
+    </form>
+</body>
+</html>

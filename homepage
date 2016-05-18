@@ -1,0 +1,247 @@
+#homepage
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPage - Home.aspx.cs" Inherits="WebApplication2.MainPage___Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Homepage</title>
+    <style>
+        p {
+            color: red;
+            text-align: center;
+            font-size: large;
+        }
+
+        body {
+            background-image: url('../../Content/web-site-background-designs.jpeg');
+            margin: 1%;
+        }
+
+
+        div.transbox {
+            margin: 15px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.6;
+            filter: alpha(opacity=60); /* For IE8 and earlier */
+        }
+
+            div.transbox p {
+                margin: 5%;
+                font-weight: bold;
+                color: #000000;
+            }
+
+        p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: xx-large;
+            color: antiquewhite;
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 3px;
+            overflow: hidden;
+            background-color: #333;
+            margin: 0%;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 15px 25px;
+                text-decoration: none;
+                font-size: large;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #111;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+
+
+        div.image {
+            text-align: left;
+            margin-left: 3%;
+            margin: 2%;
+            /*border: solid 2px;*/
+        }
+
+
+        /*table settings*/
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: -355px;
+            /*margin-bottom: 100px;
+            margin-right: -900px;
+            margin-left: 400px;*/
+            float: right;
+        }
+
+        div.table {
+            float: right;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: gray;
+            color: silver;
+        }
+
+        div.block {
+            display: table-caption;
+            border: 5px solid black;
+            width: 570px;
+            margin: 2.5%;
+            float: left;
+        }
+
+        a {
+            color: darkblue;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        p.wew {
+            text-align: left justify;
+            font-size: large;
+        }
+
+        div.contactus {
+            display: table-caption;
+            border: 5px solid black;
+            width: 550px;
+            margin: 1.90%;
+            float: right;
+        }
+
+        p.hoy {
+            text-align: justify;
+            font-size: large;
+        }
+
+        div.footer {
+            display: block;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="background">
+            <%-- HEADER --%>
+            <div class="transbox">
+                <p>Health Maintenance, Inc.</p>
+            </div>
+
+
+            <%--navigation bar--%>
+            <ul>
+                <%--@*-navigation bar*@--%>
+                <li><a href="MainPage - Home.aspx">Home</a></li>
+                <li><a href="nolink">About Us</a></li>
+                <li><a button title="Placeholder" href="MainPgMediProv.aspx">Affliated Medical Providers</a></li>
+                <li><a button title="Placeholder" href="AvailProc.aspx">Availment Procedure</a></li>
+                <li><a button title="Placeholder" href="FAQ.aspx">FAQ</a></li>
+                <li><a button title="Placeholder" href="nolink">Application for Membership</a></li>
+                <li><a href="nolink">User Log In</a></li>
+
+            </ul>
+        </div>
+
+        <%--@* /*PICTURE/HOMEPAGE*/*@--%>
+        <div class="image">
+            <img src="'../../Content/hmi.jpg" width="600" height="350" alt="HMI" />
+        </div>
+
+        <%-- TABLE ANNOUNCEMENTS --%>
+        <table>
+            <tr>
+                <th>Announcements:</th>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+            <tr>
+                <td>Messages!</td>
+            </tr>
+        </table>
+
+
+        <div>
+            <%-- SERVICES LINK --%>
+            <div class="block">
+
+                <p><b><a href="nolink">Health Services Available</a></b></p>
+
+                <p class="wew">Sample 1 - His cibo recusabo cu, ludus deserunt cu est.</p>
+                <p class="wew">Sample 2 - Usu nibh vitae molestiae ut, ei oporteat repudiare eos, esse fugit te pro.</p>
+                <p class="wew">Sample 3 - Mea pertinax vituperata honestatis an, no labitur maiestatis cum.</p>
+                <p class="wew">Sample 4 - Has ea amet tibique, id electram forensibus theophrastus vis, tota postea voluptatibus in cum.</p>
+                <p class="wew">Sample 5 - Vel in nulla principes, usu id summo essent consulatu.</p>
+            </div>
+
+            <%-- CONTACTS --%>
+            <div class="contactus">
+                <p><b><a href="nolink">Contact Us </a></b></p>
+
+                <p class=" hoy ">
+                    We were immediately fans of the lighthearted nature of this contact page from digital marketing group Mostly Serious – a fitting brand name as well. But, don’t let the informal vibe of the page fool you. The page still manages to get down to business by providing an area for you to explain the project and budget you have in mind. We also like that the company only asks for your name and email. Keeping the amount of fields to fill out at a minimal is a great technique for enticing people to sign-up. 
+                </p>
+
+                <%-- TESTIMONIALS --%>
+                <p><b><a href="nolink">Testimonials </a></b></p>
+            </div>
+        </div>
+        <div>
+            <footer>
+                Placeholder
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
